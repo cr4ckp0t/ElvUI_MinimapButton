@@ -78,4 +78,5 @@ function MMB:OnInitialize()
     self.db = LibStub("AceDB-3.0"):New("ElvUI_MinimapButtonDB", defaults)
     db = self.db.global
     LDBI:Register(MMB.addonName, LDB, db.minimap)
+    LibStub("LibElvUIPlugin-1.0"):RegisterPlugin(self.addonName)
 end
