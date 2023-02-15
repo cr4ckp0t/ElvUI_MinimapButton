@@ -3,8 +3,8 @@
 -------------------------------------------------------------------------------
 local E, _, V, P, G = unpack(ElvUI)
 local _G = getfenv(0)
-local MMB = LibStub("AceAddon-3.0"):NewAddon("ElvUI_MinimapButton")
-local L = LibStub("AceLocale-3.0"):GetLocale("ElvUI_MinimapButton", false)
+local MMB = E.Libs.AceAddon:NewAddon("ElvUI_MinimapButton")
+local L = E.Libs.ACL:GetLocale("ElvUI_MinimapButton", false)
 
 MMB.addonName = "ElvUI_MinimapButton"
 
@@ -13,7 +13,7 @@ local pairs = pairs
 local ReloadUI = _G["ReloadUI"]
 
 local LDBI = LibStub("LibDBIcon-1.0")
-local LDB = LibStub("LibDataBroker-1.1"):NewDataObject(MMB.addonName, {
+local LDB = E.Libs.LDB:NewDataObject(MMB.addonName, {
     type = "launcher",
     text = "ElvUI",
     icon = [[Interface\Addons\ElvUI_MinimapButton\Textures\elvui.tga]],
@@ -75,8 +75,8 @@ function MMB:OnDisable()
 end
 
 function MMB:OnInitialize()
-    self.db = LibStub("AceDB-3.0"):New("ElvUI_MinimapButtonDB", defaults)
+    self.db = E.Libs.AceDB:New("ElvUI_MinimapButtonDB", defaults)
     db = self.db.global
     LDBI:Register(MMB.addonName, LDB, db.minimap)
-    LibStub("LibElvUIPlugin-1.0"):RegisterPlugin(self.addonName)
+    E.Libs.EP:RegisterPlugin(self.addonName)
 end
