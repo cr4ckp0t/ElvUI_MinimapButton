@@ -7,6 +7,7 @@
 ## Notes-ruRU: Создает кнопку миникарты для ElvUI.
 ## RequiredDeps: ElvUI
 ## SavedVariables: ElvUI_MinimapButtonDB
+## IconTexture: Interface\AddOns\ElvUI_MinimapButton\Textures\elvui
 
 Locales\enUS.lua
 Locales\deDE.lua
