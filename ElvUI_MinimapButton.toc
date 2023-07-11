@@ -1,8 +1,8 @@
-## Interface: 100100
+## Interface: 100105
 ## Author: Crackpot
 ## Title: |cff1784d1ElvUI|r Minimap Button
 ## Title-ruRU: |cff1784d1ElvUI|r Кнопка миникарты
-## Version: 1.1.5
+## Version: 1.1.6
 ## Notes: Creates a minimap button for ElvUI.
 ## Notes-ruRU: Создает кнопку миникарты для ElvUI.
 ## RequiredDeps: ElvUI
@@ -21,5 +21,6 @@ Locales\zhCN.lua
 Locales\zhTW.lua
 
 ElvUI_MinimapButton.lua
+
 
 
